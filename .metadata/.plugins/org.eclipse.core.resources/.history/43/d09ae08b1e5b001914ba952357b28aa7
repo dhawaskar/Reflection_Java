@@ -1,0 +1,27 @@
+package array_enumerations;
+
+public class array_enumeration {
+
+	public static void main(String[] args) {
+		String str = "This is Sandesh Demo for Reflection to Arrays";
+	      Class cls = str.getClass();
+	      // checking for array
+	      boolean arr = cls.isArray();
+	      if(arr) {
+	         System.out.println("Result : " + cls.getName() + " is an array");
+	      } else {
+	         System.out.println("Result : " + cls.getName() + " is not an array");
+	      }
+	      int[] x= {1,2,3,4,5};
+	      Class cls1 = x.getClass();
+	      // checking for array
+	      boolean arr1 = cls1.isArray();
+	      if(arr1) {
+	         System.out.println("Result : " + cls1.getName() + " is an array");
+	      } else {
+	         System.out.println("Result : " + cls1.getName() + " is not an array");
+	      }
+
+	}
+
+}

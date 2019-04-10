@@ -1,0 +1,15 @@
+package members;
+
+import java.text.DateFormat.Field;
+
+public class fields_members_constructors {
+
+	public static void main(String[] args) throws ClassNotFoundException, NoSuchFieldException, SecurityException {
+		int[] a= {1,2,3,4,5};
+		Class c=Class.forName(args[0]);
+		java.lang.reflect.Field f=c.getField(args[1]);
+		System.out.println("Field type of array a is"+f.getType());
+		System.out.println("Generic Field type of array a is"+f.getGenericType());
+	}
+
+}

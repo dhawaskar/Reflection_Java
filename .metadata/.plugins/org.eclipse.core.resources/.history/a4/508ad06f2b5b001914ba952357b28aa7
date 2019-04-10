@@ -1,0 +1,11 @@
+package members;
+public class 
+public class fields_members_constructors {
+
+	public static void main(String[] args) {
+		int[] a= {1,2,3,4,5};
+		Class c=Class.forName(filds);
+
+	}
+
+}

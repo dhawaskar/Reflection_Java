@@ -1,0 +1,14 @@
+package class_demo;
+
+public class gettype {
+	private String s; 
+	gettype(){
+		s="Sandesh";
+	}
+	public void refelction_class() {
+		System.out.println("This is creating the class\n");
+	}
+	protected void modifier() {
+		System.out.println("Get the modifier access specifier using reflection\n");
+	}
+}

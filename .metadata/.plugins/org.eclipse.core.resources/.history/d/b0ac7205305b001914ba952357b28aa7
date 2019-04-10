@@ -1,0 +1,16 @@
+package members;
+
+import java.lang.reflect.Modifier;
+import java.text.DateFormat.Field;
+
+public class field_getmodifiers {
+	public static void main(String[] args) throws NoSuchFieldException, 
+    SecurityException, IllegalArgumentException, IllegalAccessException {
+          
+    Field field = SampleClass_modifier.class.getField("sampleField");
+    System.out.println("Modifier: " + Modifier.toString(field.getModifiers()));
+ }
+}
+class SampleClass_modifier {
+	   public static long sampleField = 5;
+	}

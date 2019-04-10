@@ -1,0 +1,11 @@
+package class_demo;
+
+public class gettype {
+	private String s; 
+	gettype(){
+		s="Sandesh";
+	}
+	void refelction_class() {
+		System.out.println("This is creating the class");
+	}
+}

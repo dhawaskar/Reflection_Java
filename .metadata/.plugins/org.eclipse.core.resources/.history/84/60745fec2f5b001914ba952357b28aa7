@@ -1,0 +1,13 @@
+package members;
+
+public class field_getmodifiers {
+	public static void main(String[] args) throws NoSuchFieldException, 
+    SecurityException, IllegalArgumentException, IllegalAccessException {
+          
+    Field field = SampleClass.class.getField("sampleField");
+    System.out.println("Modifier: " + Modifier.toString(field.getModifiers()));
+ }
+}
+class SampleClass {
+	   public static long sampleField = 5;
+	}

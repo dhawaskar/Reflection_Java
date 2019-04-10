@@ -1,0 +1,41 @@
+package array_enumerations;
+
+import java.lang.reflect.Array;
+
+public class array_enumeration {
+
+	public static void main(String[] args) {
+		String str = "This is Sandesh Demo for Reflection to Arrays";
+	      Class cls = str.getClass();
+	      // checking for array
+	      boolean arr = cls.isArray();
+	      System.out.println("Demo of Reflection isArray API");
+	      if(arr) {
+	         System.out.println("Result : " + cls.getName() + " is an array");
+	      } else {
+	         System.out.println("Result : " + cls.getName() + " is not an array");
+	      }
+	      int[] x= {1,2,3,4,5};
+	      Class cls1 = x.getClass();
+	      // checking for array
+	      boolean arr1 = cls1.isArray();
+	      if(arr1) {
+	         System.out.println("Result : " + cls1.getName() + " is an array");
+	      } else {
+	         System.out.println("Result : " + cls1.getName() + " is not an array");
+	      }
+	      
+	      System.out.println("Demo of Array cretors using Reflection");
+	      String[] stringArray = (String[]) Array.newInstance(String.class, 3);
+
+	      Array.set(stringArray, 0, "Sandesh");
+	      Array.set(stringArray, 1, "Hasil");
+	      Array.set(stringArray, 2, "Gautham");
+
+	      System.out.println("stringArray[0] = " + Array.get(stringArray, 0));
+	      System.out.println("stringArray[1] = " + Array.get(stringArray, 1));
+	      System.out.println("stringArray[2] = " + Array.get(stringArray, 2));
+
+	}
+
+}

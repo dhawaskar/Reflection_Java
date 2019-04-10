@@ -1,0 +1,37 @@
+package members;
+
+
+
+import java.lang.reflect.*;
+
+public class constructor_getconstrucots {
+
+   public static void main(String[] args) {
+
+	   constructor_getconstrucots cls = new constructor_getconstrucots();
+      Class c = cls.getClass();
+
+      // constructors
+      Constructor[] ct = c.getDeclaredConstructors();
+      for(int i = 0; i < ct.length; i++) {
+         System.out.println("Constructor found: " + ct[i].toString());
+      }
+      
+      Type[] parameters = ct[1].getGenericParameterTypes();
+      for (int i = 0; i < parameters.length; i++) {
+         System.out.println(parameters[i]);
+      }
+   }
+
+   private constructor_getconstrucots() {
+      System.out.println("no argument constructor");
+   }
+
+   public constructor_getconstrucots(Double d, Long l) {
+      this.d = d;
+      this.l = l;
+   }
+
+   Double d = new Double(3.9d);
+   Long l = new Long(7687);
+} 

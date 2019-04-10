@@ -1,0 +1,81 @@
+package array_enumerations;
+
+import java.lang.reflect.Array;
+import java.lang.reflect.Field;
+
+enum Language {
+	   C, Java;
+	}
+class SampleClass {
+	   public static long sampleField = 5;
+	}
+
+enum TraceLevel { OFF, LOW, MEDIUM, HIGH, DEBUG }
+
+class MyServer {
+    private TraceLevel level = TraceLevel.OFF;
+}
+
+public class array_enumeration {
+
+	public static void main(String[] args) throws NoSuchFieldException, SecurityException, IllegalArgumentException, IllegalAccessException {
+		String str = "This is Sandesh Demo for Reflection to Arrays";
+	      Class cls = str.getClass();
+	      // checking for array
+	      boolean arr = cls.isArray();
+	      System.out.println("Demo of Reflection isArray API");
+	      if(arr) {
+	         System.out.println("Result : " + cls.getName() + " is an array");
+	      } else {
+	         System.out.println("Result : " + cls.getName() + " is not an array");
+	      }
+	      int[] x= {1,2,3,4,5};
+	      Class cls1 = x.getClass();
+	      // checking for array
+	      boolean arr1 = cls1.isArray();
+	      if(arr1) {
+	         System.out.println("Result : " + cls1.getName() + " is an array");
+	      } else {
+	         System.out.println("Result : " + cls1.getName() + " is not an array");
+	      }
+	      
+	      System.out.println("Demo of Array cretors using Reflection");
+	      String[] stringArray = (String[]) Array.newInstance(String.class, 3);
+
+	      Array.set(stringArray, 0, "Sandesh");
+	      Array.set(stringArray, 1, "Hasil");
+	      Array.set(stringArray, 2, "Gautham");
+
+	      System.out.println("stringArray[0] = " + Array.get(stringArray, 0));
+	      System.out.println("stringArray[1] = " + Array.get(stringArray, 1));
+	      System.out.println("stringArray[2] = " + Array.get(stringArray, 2));
+	      
+	      
+	      System.out.println("Demo of Enum API's using reflection");
+	      System.out.print("Programming in " + Language.C.toString());      
+	      System.out.println(", Hashcode = " + Language.C.hashCode()); 
+	      System.out.print("Programming in " + Language.Java.toString());  
+	      System.out.println(", Hashcode = " + Language.Java.hashCode());  
+
+	      System.out.println(Language.class.isEnum());
+	      
+	      Class cls11 = Language.class;
+
+	      // returns the elements of this enum class
+	      for(Object obj: cls11.getEnumConstants()) {
+	         System.out.println(obj);
+	      }
+	      
+	      Field field = SampleClass.class.getField("sampleField");
+	      System.out.println(field.isEnumConstant());
+	      
+	      MyServer svr = new MyServer();
+		  Class<?> c = svr.getClass();
+		  Field f = c.getDeclaredField("level");
+		  f.setAccessible(true);
+		  TraceLevel oldLevel = (TraceLevel)f.get(svr);
+		  System.out.println("Original trace level:"+oldLevel);
+
+	}
+
+}

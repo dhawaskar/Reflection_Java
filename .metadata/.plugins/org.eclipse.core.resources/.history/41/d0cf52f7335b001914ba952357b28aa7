@@ -1,0 +1,17 @@
+package members;
+
+import java.lang.*;
+
+public class ClassDemo {
+
+   public static void main(String[] args) {
+
+      ClassDemo c = new ClassDemo();
+      Class cls = c.getClass();
+
+      // returns the Java language modifiers for this class
+      int i = cls.getModifiers();
+      String retval = Modifier.toString(i);
+      System.out.println("Class Modifier = " + retval);
+   }
+} 

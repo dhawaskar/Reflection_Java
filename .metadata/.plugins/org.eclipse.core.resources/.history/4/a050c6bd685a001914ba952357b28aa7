@@ -1,0 +1,19 @@
+package class_demo;
+
+import java.util.HashSet;
+import java.util.Set;
+
+public class reflection_class {
+	static byte[] bit=new byte[10];
+	static Set<String> s=new HashSet<String>();
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		gettype a=new gettype();
+		Class b=a.getClass();//reflection for the object of class gettype
+		System.out.println("Class name of object b is"+b);
+		//Class c=System.console().getClass();//console object
+		Class d=bit.getClass();//byte object
+		Class e=s.getClass();//Hashset object
+	}
+
+}
