@@ -10,18 +10,18 @@ The project Presentation has mainly three important files in src/ directory that
 
 1.	`class_demo`: This java package has class examples program that explains how the reflection API's are used for Class and objects.
 
-  * `reflection_class.java`: This class should be run to understand the API of class and objects in reflection Java.
+  	* `reflection_class.java`: This class should be run to understand the API of class and objects in reflection Java.
 
 2.	 `array_enumerations`: This Java package has classes that explains the second lesson of our presentation i.e. using the reflection to the arrays and enumerations in Java.     
-  * `array_enumeration.java`: This class explains the program that shows how to use array and enumerations along with reflection features in Java
+  	* `array_enumeration.java`: This class explains the program that shows how to use array and enumerations along with reflection features in Java
 3.	`members`: This package has several sub classes and each of them explains the usage and demo example of using the reflection in Fields, Member and constructors in Java
-  * `Field_get_set_demo.java`: Explains the reflection Fields API’s in Java
-	* `field_getmodifiers.java`: Explains the reflection Fields API’s in Java
-	* `fields_gettype.java`: Explains the reflection Fields API’s in Java
- 	* `method_getmodifiers.java`: Explains the reflection Method API’s in Java
-  *	`method_invoke.java`: Explains the reflection Method API’s in Java
-  *	`method_type.java` Explains the reflection Method API’s in Java
-  *	`constructor_getconstructors.java`: Explains the reflection Constructors API’s in Java
+  	* `Field_get_set_demo.java`: Explains the reflection Fields API’s in Java
+  	* `field_getmodifiers.java`: Explains the reflection Fields API’s in Java
+  	* `fields_gettype.java`: Explains the reflection Fields API’s in Java
+  	* `method_getmodifiers.java`: Explains the reflection Method API’s in Java
+  	* `method_invoke.java`: Explains the reflection Method API’s in Java
+  	* `method_type.java` Explains the reflection Method API’s in Java
+  	* `constructor_getconstructors.java`: Explains the reflection Constructors API’s in Java
 
 For running in-class demo simply execute the class `TheClass` in your IDE. This shows the usage of annotations in java which uses Reflections under the hood to achieve dynamic behavior.
 ## USAGE:
