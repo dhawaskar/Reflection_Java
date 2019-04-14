@@ -4,12 +4,12 @@ package members;
 
 import java.lang.reflect.*;
 
-public class constructor_getconstrucots {
+public class constructor_getconstructors {
 
    public static void main(String[] args) throws NoSuchMethodException, SecurityException, InstantiationException, IllegalAccessException, IllegalArgumentException, InvocationTargetException {
 
-	  System.out.println("Getting the constructos of a given class\n\n");
-	   constructor_getconstrucots cls = new constructor_getconstrucots();
+	  System.out.println("Getting the constructors of a given class\n\n");
+	   constructor_getconstructors cls = new constructor_getconstructors();
       Class c = cls.getClass();
 
       // constructors
@@ -24,23 +24,23 @@ public class constructor_getconstrucots {
          System.out.println(parameters[i]);
       }
       
-      System.out.println("Getting the constructos modifiers using Relfection\n\n");
+      System.out.println("Getting the constructors modifiers using Reflection\n\n");
       for (Constructor constructor : ct) {
           System.out.println("Modifier: " + Modifier.toString(constructor.getModifiers()));
           System.out.println("Constructor: " + constructor.toGenericString());
        }
       
-      System.out.println("Creating the object using relfection of constructors\n\n");
+      System.out.println("Creating the object using reflection of constructors\n\n");
       Constructor constructor = sandesh_demo_constructor.class.getConstructor(String.class);
       sandesh_demo_constructor sampleObject = (sandesh_demo_constructor)constructor.newInstance("data");
       System.out.println(sampleObject.getSampleField());
    }
 
-   private constructor_getconstrucots() {
+   private constructor_getconstructors() {
       System.out.println("no argument constructor");
    }
 
-   public constructor_getconstrucots(Double d, Long l) {
+   public constructor_getconstructors(Double d, Long l) {
       this.d = d;
       this.l = l;
    }
